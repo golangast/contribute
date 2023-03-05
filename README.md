@@ -20,17 +20,18 @@ Details : https://youtu.be/xjr__JqZ-hQ
 * [Repository overview](#repository-overview)
 * [Special thanks](#special-thanks)
 
-
+##License is GNU Version 3 to ensure people can share but need to keep original code for the public.
 
 ## General info
-contribute code
+This is just a beginner project to contribute to and play with.  
+We all need to contribute more.  That is the point of the internet and open source.
 
 
 ## Why build this?
 * It would be nice if people got involved.
-* A community creates inspiration
+* A community creates inspiration.
 * People need to contribute to things.
-* I need to contribute more
+* I need to contribute more.
 
 
 ## Technologies
@@ -49,18 +50,24 @@ go mod tidy
 
 go install github.com/spf13/cobra-cli@latest
 
-export PATH="~/go/bin:$PATH"
+export PATH="~/go/bin:$PATH" //if you dont add it to your bashrc file then its just temparory anyways
 
 cobra-cli init
 ```
 
 to create command
 
-```cobra add your command name```
+```
+cobra add your command name 
+example: cobra add second
+```
 
 to run it 
 
-```go run main.go your command name```
+```
+go run main.go your command name
+example: go run main.go first
+```
 
 
 ## Repository overview
