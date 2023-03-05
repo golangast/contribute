@@ -18,15 +18,16 @@ Details : https://youtu.be/xjr__JqZ-hQ
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Repository overview](#repository-overview)
+* [Guidelines](#guidelines)
 * [Special thanks](#special-thanks)
 
 ## License is GNU Version 3 
-to ensure people can share but need to keep original code for the public.
+To ensure people can share but need to keep original code for the public use. This way your are still recognized for your
+contributions.
 
 ## General info
 This is just a beginner project to contribute to and play with.  
 We all need to contribute more.  That is the point of the internet and open source.
-contribute code
 
 
 ## Why build this?
@@ -43,8 +44,6 @@ Project is created with:
 
 ## Setup
 To run this project for development, download it and run the following
-
-run the following
 ```
 go mod init "yourproject"
 
