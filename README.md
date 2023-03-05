@@ -1,7 +1,7 @@
 
 # contribute
 
-run the following
+```run the following```
 
 go mod init "yourproject"
 
@@ -13,10 +13,12 @@ export PATH="~/go/bin:$PATH"
 
 cobra-cli init
 
-to create command
+
+
+```to create command```
 
 cobra add your command name
 
-to run it 
+```to run it ```
 
 go run main.go your command
