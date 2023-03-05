@@ -86,7 +86,6 @@ example: go run main.go first
 - Resources that I use [Resources](https://docs.google.com/document/d/1Zb9GCWPKeEJ4Dyn2TkT-O3wJ8AFc-IMxZzTugNCjr-8/edit?usp=sharing)
 
 
-
 ## Special thanks
 Your name will be here
 
