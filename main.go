@@ -1,7 +1,11 @@
+/*
+Copyright © 2023 NAME HERE <EMAIL ADDRESS>
+
+*/
 package main
 
-import "fmt"
+import "github.com/golangast/contribute/cmd"
 
 func main() {
-	fmt.Println("works")
+	cmd.Execute()
 }
