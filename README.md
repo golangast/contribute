@@ -23,7 +23,7 @@ Details : https://youtu.be/xjr__JqZ-hQ
 
 
 ## General info
-This project is a dashboard that generates code for your app.
+contribute code
 
 
 ## Why build this?
