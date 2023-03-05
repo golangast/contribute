@@ -20,11 +20,13 @@ Details : https://youtu.be/xjr__JqZ-hQ
 * [Repository overview](#repository-overview)
 * [Special thanks](#special-thanks)
 
-##License is GNU Version 3 to ensure people can share but need to keep original code for the public.
+## License is GNU Version 3 
+to ensure people can share but need to keep original code for the public.
 
 ## General info
 This is just a beginner project to contribute to and play with.  
 We all need to contribute more.  That is the point of the internet and open source.
+contribute code
 
 
 ## Why build this?
@@ -59,16 +61,20 @@ to create command
 
 ```
 cobra add your command name 
-example: cobra add second
+
 ```
+
+example: cobra add second
+
 
 to run it 
 
 ```
 go run main.go your command name
-example: go run main.go first
+
 ```
 
+example: go run main.go first
 
 ## Repository overview
 
@@ -79,5 +85,14 @@ example: go run main.go first
 
 - Resources that I use [Resources](https://docs.google.com/document/d/1Zb9GCWPKeEJ4Dyn2TkT-O3wJ8AFc-IMxZzTugNCjr-8/edit?usp=sharing)
 
+
+
 ## Special thanks
 Your name will be here
+
+## Guidelines
+- Please try to make the code readable
+- Please try to make it verbose so everyone can learn
+- Please no bash that downloads other programs
+- Please no make files
+- Have fun and dont worry about details or bad code or anything.  Just be creative if you want.
