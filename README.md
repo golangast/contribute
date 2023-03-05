@@ -7,7 +7,6 @@ Details : https://youtu.be/xjr__JqZ-hQ
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/golangast/contribute) 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/golangast/contribute)
 ![GitHub repo size](https://img.shields.io/github/repo-size/golangast/contribute)
-![GitHub](https://img.shields.io/github/license/golangast/contribute)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/golangast/contribute)
 ![Go 100%](https://img.shields.io/badge/Go-100%25-blue)
 
