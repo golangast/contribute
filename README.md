@@ -21,4 +21,6 @@ cobra add your command name
 
 ```to run it ```
 
-go run main.go your command
+go run main.go your command name
+
+Details : https://youtu.be/xjr__JqZ-hQ
