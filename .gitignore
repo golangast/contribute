@@ -12,4 +12,10 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+
+.history/
+
+vendor/github.com/golang-jwt/jwt/
+
+vendor/github.com/labstack/echo/v4/
