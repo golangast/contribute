@@ -9,5 +9,8 @@ import (
 )
 
 func main() {
+
 	cmd.Execute()
+
+	//server.Server(TmplMainGo)
 }
