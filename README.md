@@ -20,6 +20,7 @@ Details : https://youtu.be/xjr__JqZ-hQ
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [To run this project for development, download it and run the following](#to-run-this-project-for-development-download-it-and-run-the-following)
+- [To run a command](#to-run-a-command)
 - [Repository overview](#repository-overview)
 - [Special thanks](#special-thanks)
 - [Guidelines](#guidelines)
@@ -66,13 +67,11 @@ to create command
 ---
 ```
 cobra add yourcommandnamehere 
+example: cobra add second
 ```
 ---
 
-example: cobra add second
-
-
-To Run the application to generate the code
+To Run the application to generate the code for development
 
 ---
 ```
@@ -80,13 +79,18 @@ go run main.go yourcommandname
 ```
 ---
 
-To generate a command
-
+To run a command
+---
+```
 example: go run main.go first
+```
+---
 
 To run the binary commands
 
 Download the linux binary [here](https://github.com/golangast/contribute/blob/main/test/linux/contribute)
+
+
 Download the windows binary [here](https://github.com/golangast/contribute/blob/main/test/win/contribute.exe)
 
 ---
