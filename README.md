@@ -91,7 +91,7 @@ To run the binary commands
 
 Download the linux binary [here](https://github.com/golangast/contribute/raw/main/test/linux/contribute)
 
-Download the linux binary [here](https://github.com/golangast/contribute/raw/main/test/macos/contribute)
+Download the macos binary [here](https://github.com/golangast/contribute/raw/main/test/macos/contribute)
 
 Download the windows binary [here](https://github.com/golangast/contribute/raw/main/test/win/contribute.exe)
 
