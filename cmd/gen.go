@@ -9,6 +9,7 @@ import (
 	"log"
 
 	"github.com/golangast/contribute/generateutility/gentemplates/body"
+
 	"github.com/golangast/contribute/generateutility/gentemplates/routes"
 	"github.com/golangast/contribute/generateutility/genutility"
 	"github.com/spf13/cobra"
@@ -39,12 +40,12 @@ var genCmd = &cobra.Command{
 			}
 		}
 		//update router with route
-		found, err = genutility.FindText("router/router.go", `github.com/golangast/contribute/handler/get/`+route)
+		found, err = genutility.FindText("router/router.go", `contribute/handler/get/`+route)
 		if err != nil {
 			fmt.Print(err)
 		}
 		if !found {
-			err := genutility.UpdateText("router/router.go", "//#import", `"github.com/golangast/contribute/handler/get/`+route+`"`+"\n"+`//#import`)
+			err := genutility.UpdateText("router/router.go", "//#import", `"contribute/handler/get/`+route+`"`+"\n"+`//#import`)
 			if err != nil {
 				fmt.Print(err)
 			}
@@ -54,17 +55,15 @@ var genCmd = &cobra.Command{
 		if err != nil {
 			fmt.Print(err)
 		}
-		err = genutility.Makefolder("handler/get/" + route)
-		if err != nil {
-			fmt.Print(err)
-		}
+
 		//make route file
 		routefile, err := genutility.Makefile("handler/get/" + route + "/" + route + ".go")
 		if err != nil {
 			fmt.Print(err, routefile)
 		}
+
 		//make html file
-		htmlfile, err := genutility.Makefile("server/templates/" + route + ".html")
+		htmlfile, err := genutility.Makefile("templates/" + route + ".html")
 		if err != nil {
 			fmt.Print(err, htmlfile)
 		}
@@ -75,12 +74,20 @@ var genCmd = &cobra.Command{
 		if err != nil {
 			fmt.Print(err)
 		}
+		//footer/header map for {{template "footer" .}} {{end}}
+		mb := make(map[string]string)
+		headerb := fmt.Sprintf(`{{template "header" .}}%s`, "")
+		footerb := fmt.Sprintf(`{{template "footer" .}}%s`, "")
+		mb["footer"] = footerb
+		mb["header"] = headerb
+		mb["routes"] = route
 		//write it to the html file
-		err = genutility.Writetemplate(body.Bodytemp, htmlfile, r)
+		err = genutility.Writetemplate(body.Bodytemp, htmlfile, mb)
 		if err != nil {
 			fmt.Print(err)
 		}
-		err, out, errout := genutility.Shellout(`go mod tidy && go mod vendor && go build`)
+
+		err, out, errout := genutility.Shellout(`go mod tidy && go mod vendor`)
 		if err != nil {
 			log.Printf("error: %v\n", err)
 		}

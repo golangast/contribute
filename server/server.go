@@ -26,11 +26,10 @@ func Server() {
 	if err != nil {
 		fmt.Print(err)
 	}
+	files = append(files, "templates")
+
 	renderer := &TemplateRenderer{
-		templates: template.Must(template.New("t").Funcs(template.FuncMap{
-			// "IndexCount":     IndexCount,
-			// "RemoveBrackets": RemoveBrackets,
-		}).Funcs(sprig.FuncMap()).ParseFS(TmplMainGo, files...)),
+		templates: template.Must(template.New("t").Funcs(sprig.FuncMap()).ParseFS(TmplMainGo, files...)),
 	}
 
 	e.Renderer = renderer
