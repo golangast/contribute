@@ -21,7 +21,8 @@ Details : https://youtu.be/xjr__JqZ-hQ
 - [Setup](#setup)
 - [To run this project for development, download it and run the following](#to-run-this-project-for-development-download-it-and-run-the-following)
 - [To run a command](#to-run-a-command)
-- [If you have permission issues for linux then run](#if-you-have-permission-issues-for-linux-then-run)
+- [If you have permission issues for linux or macos then run](#if-you-have-permission-issues-for-linux-or-macos-then-run)
+- [To run the binary commands](#to-run-the-binary-commands)
 - [Repository overview](#repository-overview)
 - [Special thanks](#special-thanks)
 - [Guidelines](#guidelines)
@@ -87,7 +88,7 @@ example: go run main.go first
 ```
 ---
 
-To run the binary commands
+
 
 Download the linux binary [here](https://github.com/golangast/contribute/raw/main/test/linux/contribute)
 
@@ -95,12 +96,13 @@ Download the macos binary [here](https://github.com/golangast/contribute/raw/mai
 
 Download the windows binary [here](https://github.com/golangast/contribute/raw/main/test/win/contribute.exe)
 
-If you have permission issues for linux then run 
+If you have permission issues for linux or macos then run 
 ---
 ```go
 chmod u+x ./contribute
 ```
 ---
+To run the binary commands
 ---
 ```go
 //every command you run from the binary with ./contribute and then the command like the following
