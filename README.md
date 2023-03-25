@@ -88,10 +88,10 @@ example: go run main.go first
 
 To run the binary commands
 
-Download the linux binary [here](https://github.com/golangast/contribute/blob/main/test/linux/contribute)
+Download the linux binary [here](https://github.com/golangast/contribute/raw/main/test/linux/contribute)
 
 
-Download the windows binary [here](https://github.com/golangast/contribute/blob/main/test/win/contribute.exe)
+Download the windows binary [here](https://github.com/golangast/contribute/raw/main/test/win/contribute.exe)
 
 ---
 ```go
