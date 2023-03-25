@@ -1,3 +1,4 @@
+
 Details : https://youtu.be/xjr__JqZ-hQ
 
 
@@ -12,13 +13,16 @@ Details : https://youtu.be/xjr__JqZ-hQ
 
 
 ## Contribute
-* [General info](#general-info)
-* [Why build this?](#why-build-this)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Repository overview](#repository-overview)
-* [Guidelines](#guidelines)
-* [Special thanks](#special-thanks)
+- [Contribute](#contribute)
+- [License is GNU Version 3](#license-is-gnu-version-3)
+- [General info](#general-info)
+- [Why build this?](#why-build-this)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [To run this project for development, download it and run the following](#to-run-this-project-for-development-download-it-and-run-the-following)
+- [Repository overview](#repository-overview)
+- [Special thanks](#special-thanks)
+- [Guidelines](#guidelines)
 
 ## License is GNU Version 3 
 To ensure people can share but need to keep original code for the public use. This way your are still recognized for your
@@ -43,6 +47,7 @@ Project is created with:
 
 ## Setup
 To run this project for development, download it and run the following
+---
 ```
 go mod init "yourproject"
 
@@ -54,32 +59,61 @@ export PATH="~/go/bin:$PATH" //if you dont add it to your bashrc file then its j
 
 cobra-cli init
 ```
+---
 
 to create command
 
+---
 ```
-cobra add your command name 
-
+cobra add yourcommandnamehere 
 ```
+---
 
 example: cobra add second
 
 
-to run it 
+To Run the application to generate the code
 
+---
 ```
-go run main.go your command name
+go run main.go yourcommandname
+```
+---
 
-```
+To generate a command
 
 example: go run main.go first
 
+To run the binary commands
+
+Download the linux binary [here](https://github.com/golangast/contribute/blob/main/test/linux/contribute)
+Download the windows binary [here](https://github.com/golangast/contribute/blob/main/test/win/contribute.exe)
+
+---
+```go
+//every command you run from the binary with ./contribute and then the command like the following
+./contribute start
+
+start //generates the files form the binary
+
+run //runs the server
+
+gen --route "yourroutenamehere" //generates routing
+
+rs //to reload files
+```
+---
+
 ## Repository overview
 
+---
 ```
 ├── cmd
+├── generateutility is for the generating code
+├── test has the binaries for testing
 └── main.go
 ```
+---
 
 - Resources that I use [Resources](https://docs.google.com/document/d/1Zb9GCWPKeEJ4Dyn2TkT-O3wJ8AFc-IMxZzTugNCjr-8/edit?usp=sharing)
 
