@@ -110,7 +110,7 @@ To run the binary commands
 
 start //generates the files form the binary
 
-run //runs the server
+run //runs the server and go to http://localhost:5002/home
 
 gen --route "yourroutenamehere" //generates routing
 
