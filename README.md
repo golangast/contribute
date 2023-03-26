@@ -48,6 +48,8 @@ Project is created with:
 * [Cobra](https://github.com/spf13/cobra) - To create separate commands
 
 
+Frontend contributing is for [here](https://github.com/golangast/contributefrontend)
+
 ## Setup
 To run this project for development, download it and run the following
 ---
@@ -128,6 +130,10 @@ rs //to reload files
 └── main.go
 ```
 ---
+
+If you just like frontend Please add some frontend files and push to 
+[here](https://github.com/golangast/contributefrontend)
+
 
 - Resources that I use [Resources](https://docs.google.com/document/d/1Zb9GCWPKeEJ4Dyn2TkT-O3wJ8AFc-IMxZzTugNCjr-8/edit?usp=sharing)
 

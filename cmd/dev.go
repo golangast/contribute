@@ -6,9 +6,8 @@ package cmd
 
 import (
 	"fmt"
-	"log"
 
-	"github.com/golangast/contribute/generateutility/genutility"
+	"github.com/golangast/contribute/server"
 	"github.com/spf13/cobra"
 )
 
@@ -24,13 +23,7 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("dev called")
-		err, out, errout := genutility.Shellout(`go run server/server.go`)
-		if err != nil {
-			log.Printf("error: %v\n", err)
-		}
-		fmt.Println(out)
-		fmt.Println("--- errs ---")
-		fmt.Println(errout)
+		server.Server()
 	},
 }
 

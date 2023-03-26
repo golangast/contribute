@@ -11,30 +11,33 @@ import (
 	"path/filepath"
 
 	"github.com/Masterminds/sprig/v3"
+	assets "github.com/golangast/contribute/assets"
 	routes "github.com/golangast/contribute/router"
+
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/labstack/gommon/log"
 )
 
-//go:embed templates
-var TmplMainGo embed.FS
-
+func add() string {
+	return "ere"
+}
 func Server() {
 	e := echo.New()
-	files, err := getAllFilenames(&TmplMainGo)
+	files, err := getAllFilenames(&assets.Assets)
 	if err != nil {
 		fmt.Print(err)
 	}
-	files = append(files, "templates")
 
 	renderer := &TemplateRenderer{
-		templates: template.Must(template.New("t").Funcs(sprig.FuncMap()).ParseFS(TmplMainGo, files...)),
+		templates: template.Must(template.New("t").Funcs(template.FuncMap{
+			"adds": add,
+		}).Funcs(sprig.FuncMap()).ParseFS(assets.Assets, files...)),
 	}
 
 	e.Renderer = renderer
 	e.Use(middleware.StaticWithConfig(middleware.StaticConfig{
-		Filesystem: getFileSystem(TmplMainGo),
+		Filesystem: getFileSystem(assets.Assets),
 		HTML5:      true,
 	}))
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
@@ -112,7 +115,7 @@ var err error
 func getFileSystem(TmplMainGo embed.FS) http.FileSystem {
 
 	log.Print("using embed mode")
-	fsys, err := fs.Sub(TmplMainGo, "templates")
+	fsys, err := fs.Sub(TmplMainGo, "assets/templates")
 	if err != nil {
 		log.Print(err)
 	}
